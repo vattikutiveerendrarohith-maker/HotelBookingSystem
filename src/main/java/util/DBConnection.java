@@ -14,18 +14,16 @@ public class DBConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/hotel_booking",
-                    "root",
-                    "root"
+                "jdbc:mysql://hotel-booking-vattikutiveerendrarohith-d64f.j.aivencloud.com:28523/hotel_booking?sslMode=REQUIRED",
+                "avnadmin",
+                "AVNS_l9wgFGCnTGUZ0wnnLL-"
             );
 
-            System.out.println("Database Connected");
+            System.out.println("Cloud Database Connected");
 
         } catch (Exception e) {
 
-            System.out.println(e);
-
-            System.out.println("Connection Failed");
+            e.printStackTrace();
         }
 
         return con;
